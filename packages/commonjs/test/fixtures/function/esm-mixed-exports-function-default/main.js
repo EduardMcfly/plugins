@@ -13,6 +13,9 @@ t.deepEqual(newDefault.foo, ['third']);
 newDefault.update();
 t.is(newDefault.foo, 'updated');
 
+newDefault.destroy();
+t.is(newDefault.foo, 'destroyed');
+
 const newFoo = new Foo('fourth');
 t.deepEqual(newFoo.foo, ['fourth']);
 newFoo.update();
